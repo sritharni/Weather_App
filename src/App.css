@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* General Styles */
+html, body {
+  font-family: 'Lato', sans-serif !important;
+  /* background-color: aliceblue; */
+  background-image: url('https://raw.githubusercontent.com/hosseinghafouri/weather-app-real-API/main/content/images/bg.jpg');
+    background-size: cover;
+    /* background-position: top center; */
+    background-repeat: no-repeat;
+}
+
+.App {
+  text-align: center;
+  /* background-color: aliceblue; */
+  /* background-image: url('../public/clouds.jpeg'); */
+     /* background: #333; */
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.heading {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* Autosuggest Styles */
+.react-autosuggest__container {
+  position: relative;
+  width: 100%;
+}
+
+.react-autosuggest__input {
+  width: calc(100% - 40px);
+  height: 40px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+  background-color: #fff;
+  z-index: 2;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.react-autosuggest__suggestions-list > li {
+  border: none;
+  cursor: pointer;
+}
+
+.react-autosuggest__suggestion {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: center;
+}
+
+.autosuggest-container {
+  width: 100%;
+  display: flex;
+}
+
+.autosuggest-container > div > input {
+  padding: 3%;
+  width: 100%;
+}
+
+.search-btn {
+  height: auto;
+  padding: 20px;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Spinner Styles */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-body {
+  text-align: left;
+}
+
+.city-name {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.current-temp {
+  font-size: 2.5em;
+}
