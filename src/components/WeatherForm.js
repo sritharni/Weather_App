@@ -21,8 +21,9 @@ const WeatherForm = ({ onSearch, onLocationSearch }) => {
       const data = await response.json();
       return data.geonames.map((item) => item.name);
     } catch (error) {
+      let defaultValues = ["Los Angeles", "Los Vegas", "Santiago de los Caballeros", "Los Andes", "Los Aldamas"];
       console.error('Error fetching city suggestions:', error);
-      return [];
+      return defaultValues;
     }
   }, []);
 
